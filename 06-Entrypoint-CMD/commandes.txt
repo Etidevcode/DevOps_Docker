@@ -1,0 +1,59 @@
+ubuntu@ip-172-31-30-144:~$ mkdir EntryCMD
+ubuntu@ip-172-31-30-144:~$ cd EntryCMD/
+ubuntu@ip-172-31-30-144:~/EntryCMD$ mkdir cmd entry entrycmd
+ubuntu@ip-172-31-30-144:~/EntryCMD$ ls
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cd cmd/
+ubuntu@ip-172-31-30-144:~/EntryCMD/cmd$ vim Dockerfile
+ubuntu@ip-172-31-30-144:~/EntryCMD/cmd$ cd ..
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cd entry
+ubuntu@ip-172-31-30-144:~/EntryCMD/entry$ vim Dockerfile
+ubuntu@ip-172-31-30-144:~/EntryCMD/entry$ cd ..
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cd entrycmd/
+ubuntu@ip-172-31-30-144:~/EntryCMD/entrycmd$ vim Dockerfile
+ubuntu@ip-172-31-30-144:~/EntryCMD/entrycmd$ cd ..
+
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cat cmd/Dockerfile
+FROM ubuntu:latest
+CMD ["echo", "hello"]
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ vim cmd/Dockerfile
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker build -t printer:v1 cmd/
+                                                        0.0s
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker images
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cat cmd/Dockerfile
+FROM ubuntu:latest
+CMD ["echo", "hello"]
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker images
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v1
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cat entry/Dockerfile
+FROM ubuntu:latest
+ENTRYPOINT ["echo"]
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker build -t printer:v2 entry/
+                                                       0.0s
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker images
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v2
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v2 hello
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ ls
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ cat entrycmd/Dockerfile
+FROM ubuntu:latest
+ENTRYPOINT ["echo"]
+cmd ["hello"]
+
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker build -t printer:v3 entrycmd/
+                                                         0.0s
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v3
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v3 hi
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v3 hello world
+ubuntu@ip-172-31-30-144:~/EntryCMD$ docker run printer:v3
+

@@ -1,0 +1,52 @@
+ubuntu@ip-172-31-30-144:~$ docker pull nginx
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker inspect nginx
+
+ubuntu@ip-172-31-30-144:~$ docker run -d -P nginx
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ docker logs hardcore_hofstadter
+
+ubuntu@ip-172-31-30-144:~$ docker run -P nginx
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+
+ubuntu@ip-172-31-30-144:~$ docker run -d -P mysql:5.7
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ docker logs quizzical_leakey
+
+ubuntu@ip-172-31-30-144:~$ docker run -d -P -e MYSQL_ROOT_PASSWORD=mypass mysql:5.7
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker logs zealous_diffie
+
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+
+ubuntu@ip-172-31-30-144:~$ docker stop 7dae559a33d3  2b1bf1302676 0be5b1027502
+
+ubuntu@ip-172-31-30-144:~$ docker rm zealous_diffie hardcore_hofstadter
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+
+ubuntu@ip-172-31-30-144:~$ docker stop 2b1bf1302676
+
+ubuntu@ip-172-31-30-144:~$ docker rm 2b1bf1302676
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker rmi nginx mysql
+

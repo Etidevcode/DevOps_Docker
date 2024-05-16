@@ -1,0 +1,40 @@
+ubuntu@ip-172-31-30-144:~$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+ubuntu@ip-172-31-30-144:~$ docker-compose --help
+
+ubuntu@ip-172-31-30-144:~$ mkdir composetest
+ubuntu@ip-172-31-30-144:~$ cd composetest/
+ubuntu@ip-172-31-30-144:~/composetest$ vim app.py
+ubuntu@ip-172-31-30-144:~/composetest$ vim requirements.txt
+ubuntu@ip-172-31-30-144:~/composetest$ vim Dockerfile
+ubuntu@ip-172-31-30-144:~/composetest$ vim docker-compose.yml
+ubuntu@ip-172-31-30-144:~/composetest$ docker compose up
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose down
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker images
+
+ubuntu@ip-172-31-30-144:~/composetest$ ls
+
+ubuntu@ip-172-31-30-144:~/composetest$ vim docker-compose.yml
+ubuntu@ip-172-31-30-144:~/composetest$ docker compose up
+
+ubuntu@ip-172-31-30-144:~/composetest$ vim docker-compose.yml
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker --version
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose --version
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose down
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose up --build
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose up -d
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker ps
+
+
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose ps
+ 
+ubuntu@ip-172-31-30-144:~/composetest$ docker-compose top
+

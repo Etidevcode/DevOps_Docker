@@ -1,0 +1,111 @@
+ubuntu@ip-172-31-30-144:~$ docker pull nginx
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker pull nginx:mainline-alpine-perl
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker run --name myweb -p 7090:80 -d nginx
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker stop 3e89147378e4
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ docker start myweb
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ ps -ef
+
+ubuntu@ip-172-31-30-144:~$ sudo -i
+root@ip-172-31-30-144:~# cd /var/lib/docker
+
+root@ip-172-31-30-144:/var/lib/docker# ls
+
+root@ip-172-31-30-144:/var/lib/docker# cd containers/
+root@ip-172-31-30-144:/var/lib/docker/containers# ls
+
+root@ip-172-31-30-144:/var/lib/docker/containers# docker ps
+
+root@ip-172-31-30-144:/var/lib/docker/containers# cd 5783b04436b6f82cdd30819ef9e6f8a8b9146d8d13535ee332db8a6d62016623
+root@ip-172-31-30-144:/var/lib/docker/containers/5783b04436b6f82cdd30819ef9e6f8a8b9146d8d13535ee332db8a6d62016623# ls
+
+root@ip-172-31-30-144:/var/lib/docker/containers/5783b04436b6f82cdd30819ef9e6f8a8b9146d8d13535ee332db8a6d62016623# ls
+
+root@ip-172-31-30-144:/var/lib/docker/containers/5783b04436b6f82cdd30819ef9e6f8a8b9146d8d13535ee332db8a6d62016623# cd ..
+
+root@ip-172-31-30-144:/var/lib/docker/containers# ls
+
+root@ip-172-31-30-144:/var/lib/docker/containers# du -sh 5783b04436b6f82cdd30819ef9e6f8a8b9146d8d13535ee332db8a6d62016623
+
+root@ip-172-31-30-144:/var/lib/docker/containers# cd ..
+root@ip-172-31-30-144:/var/lib/docker# ls
+
+root@ip-172-31-30-144:/var/lib/docker# ls image/
+
+root@ip-172-31-30-144:/var/lib/docker# ls image/overlay2/
+
+root@ip-172-31-30-144:/var/lib/docker# logout
+ubuntu@ip-172-31-30-144:~$ ls
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker exec myweb ls /
+
+ubuntu@ip-172-31-30-144:~$ docker exec -it myweb /bin/bash
+root@3e89147378e4:/# ls
+
+
+root@3e89147378e4:/# apt update
+
+root@3e89147378e4:/# ps -ef
+
+root@3e89147378e4:/# exit
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker rmi nginx:mainline-alpine-perl
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker stop 3e89147378e4
+
+ubuntu@ip-172-31-30-144:~$ docker rm 3e89147378e4
+
+ubuntu@ip-172-31-30-144:~$ docker rmi nginx
+
+ubuntu@ip-172-31-30-144:~$ docker pull ubuntu
+
+ubuntu@ip-172-31-30-144:~$ docker run ubuntu
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ docker run -it ubuntu /bin/bash
+root@945cfff47933:/# ps -ef
+
+root@945cfff47933:/# exit
+
+ubuntu@ip-172-31-30-144:~$ docker ps
+
+ubuntu@ip-172-31-30-144:~$ docker ps -a
+
+ubuntu@ip-172-31-30-144:~$ docker rm intelligent_roentgen nostalgic_roentgen amazing_ardinghelli
+
+ubuntu@ip-172-31-30-144:~$ docker images
+
+ubuntu@ip-172-31-30-144:~$ docker rmi ubuntu hello-world
+
+ubuntu@ip-172-31-30-144:~$
